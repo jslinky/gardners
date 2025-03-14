@@ -15,7 +15,7 @@ body {
 
 .section-hero {
     mask: var(--mask-corner-cut-angles-1);
-    max-width: var(--breakpoint-xl);
+    max-width: min(calc(100% - 3rem), var(--breakpoint-xl));
     margin-inline: auto;
     rotate: 2deg;
 }

@@ -11,7 +11,7 @@ import { MoveRight } from 'lucide-vue-next';
     <div class="md:w-1/2">          
         <p class="uppercase tracking-wider font-bold text-xs text-primary">About Gardners</p>
         <h1 class="text-5xl leading-[1.2] font-bold mb-4 mt-2 "><span class="italic text-primary">Leading</span> Book &amp; Media Wholesaler</h1>
-        <div class="max-w-md">
+        <div class="max-w-prose lg:max-w-md">
         <p class="text-xl mb-6 font-semibold text-gray-700">Established over 38 years ago, Gardners has grown to become a leading wholesaler of books, eBooks, gift and stationery lines to retailers worldwide.</p>
         <p class="text-gray-600">Based out of a 350,000 square foot facility in southern England, further a further facility in Norwich, our stock represents the largest range of physical English language media products in Europe. We offer c.500,000 titles in stock and ready to ship same day to any UK address, as well as 4.5 million+ eBooks available for instant fulfilment to consumers.</p>
         <button class="bg-white primary font-semibold py-3 rounded hover:text-primary-shade mt-6">
