@@ -25,7 +25,7 @@ const {
     text, 
     cssClasses = {
         'container': 'flex flex-col place-content-between bg-white rounded shadow p-6',
-        'headline': 'flex flex-col text-[clamp(var(--text-4xl),3cqi,var(--text-6xl))] font-semibold mb-2 leading-[1]',
+        'headline': 'flex flex-col text-4xl md:text-[clamp(var(--text-4xl),3cqi,var(--text-6xl))] font-semibold mb-2 leading-[1]',
         'headlineSpan': ['text-primary'],
         'title': 'text-[0.375em] text-primary-dark',
         'text': ['text-gray-600']
