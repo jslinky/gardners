@@ -1,0 +1,13 @@
+@import "./tailwind.css" layer(tail);
+@import "./site.css" layer(site);
+
+@layer site, tail;
+
+@theme {
+    --font-display: "Inter", "sans-serif";
+    --color-primary: oklch(59.16% 0.141565 242.4509);
+    --color-primary-tint: oklch(from var(--color-primary) calc(l + 0.025) c h );
+    --color-primary-shade: oklch(from var(--color-primary) calc(l - 0.1) c h );
+    --color-primary-dark: oklch(from var(--color-primary) calc(l - 0.4) c h );
+
+}

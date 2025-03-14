@@ -1,0 +1,255 @@
+
+
+:root {
+    --mask-corner-cut-angles-1: 
+    conic-gradient(from -45deg at 1rem 1rem,#0000 25%,#000 0) 
+    -1rem 0   /100% 51% repeat-x,
+    conic-gradient(from 135deg at 1rem calc(100% - 1rem),#0000 25%,#000 0) 
+    -1rem 100%/100% 51% repeat-x;
+    --clip: polygon(50% 20%, 100% 0, 100% 80%, 50% 100%, 0% 80%, 0 0);
+}
+
+body {
+    font-family: var(--font-display);
+}
+
+.section-hero {
+    mask: var(--mask-corner-cut-angles-1);
+    max-width: var(--breakpoint-xl);
+    margin-inline: auto;
+    rotate: 2deg;
+}
+
+.container-alt {
+    width: min(calc(100% - ((var(--spacing) * 6) * 2)), var(--breakpoint-xl));
+}
+
+:where(a, button).primary {
+    color: var(--color-primary);
+}
+
+header {
+    top: 0;
+    position: sticky;
+    background: white;
+    z-index: 10;    
+}
+
+nav summary {
+    list-style: none;
+    &::marker {
+        content: "";
+    }
+}
+
+nav {
+    box-shadow: 0 -1px 0 0 var(--color-primary-shade) inset;
+    details {
+        anchor-name: --nav;
+        > div {
+            position: absolute;
+            position-anchor: --nav;
+            top: calc(anchor(--nav top) + 2rem);
+            background: var(--color-primary);
+            height: fit-content;
+            width:100%;
+        }
+        @container header (inline-size >= 48rem) {
+            > div {
+                position: relative;
+                position-anchor: unset;
+                width: auto;
+            }
+        }
+    }
+}
+
+@keyframes adjustgrip {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(3deg);
+    }
+    66% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.adjust-grip {
+    animation: adjustgrip 10s infinite;
+}
+
+.arrow {
+    filter: drop-shadow(3px -1px 0px white);
+}
+
+.check-pattern {
+    --c1: var(--color-1, #444cf7);
+    --c2: var(--color-2, #e5e5f7);
+    background-color: var(--c2);
+    opacity: 0.8;
+    background-image:  repeating-linear-gradient(45deg, var(--c1) 25%, transparent 25%, transparent 75%, var(--c1) 75%, var(--c1)), repeating-linear-gradient(45deg, var(--c1) 25%, var(--c2) 25%, var(--c2) 75%, var(--c1) 75%, var(--c1));
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+}
+
+.section-selling__list {
+    counter-reset: selling-counter;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    /* grid-template-rows: 1lh 3lh 1lh 3lh 1lh 3lh; */
+    grid-template-rows: repeat(3, 1lh 3lh);
+    column-gap: calc(var(--spacing)* 6);
+    dt {
+        grid-column: 2/2;
+        display: contents;
+        &:before {
+            width: 5rem;
+            counter-increment: selling-counter;
+            content: counter(selling-counter);
+            grid-column: 1/1;
+            display: inline-flex;
+            background: var(--color-blue-100);
+            place-content: center;
+            aspect-ratio: 2/3;
+            height: 100%;
+            clip-path: var(--clip);
+            align-items: center;
+            grid-row: span 2;
+            font-size: var(--text-4xl);
+        }
+    }
+    dd {
+        grid-column: 2/2;
+    }
+}
+
+.retailer-grid {
+    --gap: 1rem;
+    --total-gap: calc(var(--gap) + (var(--spacing) * 2));
+    counter-reset: retailer-counter;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+    grid-gap: var(--total-gap);
+    width: min(var(--breakpoint-lg), 100%);
+    margin-inline: auto;
+}
+
+.retailer-item {
+    display: contents;
+    > div {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            width: var(--gap);
+            height:2px;
+            background: var(--color-blue-100);
+            position: absolute;
+            top:calc(50% - 1px);
+        }
+    }
+    &:nth-of-type(odd) {
+        > div {
+            grid-column: 1/1;
+            text-align: right;
+            &:before {
+                right:calc(-1 * var(--total-gap));
+            }
+        }
+    }
+    &:nth-of-type(even) {
+        > div {        
+            grid-column: 3/3;
+            &:before{
+                left:calc(-1 * var(--total-gap));
+            }
+        }
+    }
+    &:nth-of-type(1) {
+        > div {
+            grid-row: 1/1;
+        }
+    }
+    &:nth-of-type(3) {
+        > div {
+            grid-row: 3/3;
+        }
+    }    
+    &:before {
+        counter-increment: retailer-counter;
+        content: counter(retailer-counter);
+        font-weight: bold;
+        display: grid;
+        place-content: center;
+        font-size: var(--text-4xl);
+        grid-column: 2/2;
+        background: var(--color-blue-100);
+        z-index: 1;
+        aspect-ratio: 1/1;
+        padding: calc(var(--spacing) * 1);
+        align-self: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.25rem;
+
+    }
+  }
+
+  .retailer-grid-vertical-line {
+    grid-column: 2/2;
+    grid-row: 1/-1;
+    width:2px;
+    height: 100%;
+    background: var(--color-blue-100);
+    /* background: red; */
+    /* z-index: 11; */
+    position: absolute;
+    left: calc(50% - 1px);
+    transform: scaleY(1.5)
+  }
+
+  .section-facilities__backdrop {
+    background: radial-gradient(circle at 50%, #000, #000 50%, transparent 50%);
+    mask-image: linear-gradient(to bottom, #000, transparent);
+  }
+
+  .section-eu-trading {
+    details {
+        inline-size: 50ch;
+      
+        @media (prefers-reduced-motion: no-preference) {
+          interpolate-size: allow-keywords;
+        }
+      
+        &::details-content {
+          opacity: 0;
+          block-size: 0;
+          overflow-y: clip;
+          transition: content-visibility 1s allow-discrete, opacity 1s, block-size 1s;
+        }
+      
+        &[open]::details-content {
+          opacity: 1;
+          block-size: auto;
+        }
+
+        p {
+            color: var(--color-gray-700);
+          }        
+    }    
+
+    summary {
+        &::marker {
+            color: var(--color-primary);
+        }
+    }
+
+
+  }
