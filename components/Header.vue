@@ -2,7 +2,7 @@
 import { useResizeObserver } from '@vueuse/core'
 import { Search, CircleUserRound, Handshake, Menu, X } from 'lucide-vue-next'
 
-const menuOpen = ref(true);
+const menuOpen = ref(false);
 
 const headerEl = useTemplateRef('header')
 
@@ -15,13 +15,23 @@ useResizeObserver(headerEl, (entries) => {
 })
 
 const headerWidthInRems = computed(() => headerWidth.value / 16)
+const breakpoint = 52
+
+watch(headerWidthInRems, (width, oldWidth) => {
+    
+  if (width >= breakpoint) {
+    menuOpen.value = true
+  }
+  if(oldWidth >= breakpoint && width < breakpoint) {
+    menuOpen.value = false
+  }
+})
 
 </script>
 
 <template>
   <header ref="header" class="text-white">
     <div class="container-alt @container/header mx-auto gap-y-2 pt-2 flex flex-col">
-      <!-- Top Nav (Optional) -->
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-8 w-full"> 
           <div class="text-xl font-semibold w-[clamp(100px,15vw,200px)] shrink-0">

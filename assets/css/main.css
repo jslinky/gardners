@@ -11,3 +11,8 @@
     --color-primary-dark: oklch(from var(--color-primary) calc(l - 0.4) c h );
 
 }
+
+@utility full-bleed {
+    width: 100vw;
+    margin-inline: calc(-50vw + 50%);
+  }

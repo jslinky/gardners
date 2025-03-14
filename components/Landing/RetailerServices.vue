@@ -2,7 +2,8 @@
   <section class="pb-12 bg-blue-100 relative">
     <div class="container-alt mx-auto 2xl:max-w-screen-xl pt-6 pb-16 px-6 lg:px-12 bg-white rounded flex flex-wrap flex-row gap-20 z-1 relative after:w-[50vw] after:h-full after:bg-white after:absolute after:top-0 after:right-0 after:-left-1/2 after:z-[-1]">
         <div class="grow-0 mb-4 mt-6 self-center">
-            <h2 class="text-5xl font-bold mb-4">Retailer Services</h2>
+            <p class="uppercase tracking-wider font-bold text-xs text-primary mt-6">Powering Retail Success</p>
+            <h2 class="text-5xl font-bold mb-4 mt-4">Retailer Services</h2>
             <p class="max-w-md leading-[1.75] text-balance text-gray-700">We support retailers with tailored solutions to streamline operations, enhance efficiency, and maximize sales. Whether you’re an independent bookseller or a large chain, our multi-channel support, direct fulfillment, and customized solutions help you serve customers seamlessly.</p>
             <button class="mt-8 bg-primary text-white px-6 py-3 rounded hover:bg-primary-shade font-semibold"> Book a call </button>
         </div>

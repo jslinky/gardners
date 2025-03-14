@@ -8,7 +8,8 @@ import { Container, Globe, Truck } from 'lucide-vue-next'
 <template>
   <section class="section-facilities bg-blue-100 py-12 relative z-2" :style="{  '--c1': 'var(--color-primary)', '--c2': 'var(--color-primary-tint)' }">
     <div class="container-alt mx-auto 2xl:max-w-screen-xl px-6 pt-6 pb-16 lg:px-12 bg-white rounded z-1 relative after:w-[50vw] after:h-full after:bg-white after:absolute after:top-0 after:right-0 after:left-1/2 after:z-[-1]">
-      <h2 class="text-5xl font-bold mt-6">Our Facilities</h2>
+        <p class="uppercase tracking-wider font-bold text-xs text-primary mt-6">Built for Efficiency & Global Reach</p>
+        <h2 class="text-5xl font-bold mt-4">Our Facilities</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 *:aspect-landscape *:border *:border-gray-300">
         <div class="bg-white flex place-content-between p-10 flex-col">
           <div>

@@ -2,7 +2,7 @@
   <section class="section-selling container-alt mx-auto 2xl:max-w-screen-xl pt-16 pb-24">
     <div class="flex flex-col md:flex-row md:items-center lg:px-8">
     <div class="md:w-1/2">          
-        <p class="uppercase tracking-wider font-bold text-xs text-primary">About Gardners</p>
+        <p class="uppercase tracking-wider font-bold text-xs text-primary">Expand Your Reach with Us</p>
         <h1 class="text-5xl leading-[1.2] font-bold mb-4 mt-2 ">Selling to <span class="italic text-primary">Gardners</span></h1>
         <p class="max-w-lg text-gray-700">Interested in listing your products with us? We offer a comprehensive platform for publishers, distributors, and labels to reach a global audience.</p>
         <div class="max-w-md mt-12">
@@ -18,11 +18,11 @@
             <button class="mt-8 bg-primary text-white px-6 py-3 rounded hover:bg-primary-shade font-semibold">Find out more </button>
         </div>
     </div>
-    <div class="md:w-1/2 mt-6 md:mt-0 md:pl-8 overflow-clip">
+    <div class="md:w-1/2 mt-6 md:mt-0 md:pl-8 overflow-clip aspect-square">
         <img 
-        src="../../assets/img/warehouse.jpeg" 
-        alt="Warehouse or Bookshelves" 
-        class="rounded shadow aspect-portrait object-cover"
+        src="../../assets/img/meeting.jpg" 
+        alt="Selling to Gardners" 
+        class="rounded shadow aspect-portrait object-cover h-full"
         />
     </div>
     </div>    
