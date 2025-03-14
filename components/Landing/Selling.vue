@@ -34,8 +34,8 @@
                   We continue to support retailers and suppliers across the EU. Our logistics and distribution networks remain robust, ensuring smooth and efficient delivery of goods post-Brexit.
                 </p>
             </div>
-            <div class="grow-1 basis-[600px] *:mt-4">
-                <details>
+            <div class="grow-1 basis-[600px] *:mt-4 max-w-full">
+                <details class="max-w-full">
                   <summary>I am sending books to Gardners from outside the UK</summary>
                   <p>If you are sending books to Gardners from outside the UK, please ensure that you have the correct customs documentation in place. This includes a commercial invoice and a CN22 or CN23 form. For more information, please contact our customer service team.</p>
                 </details>
