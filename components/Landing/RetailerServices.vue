@@ -35,7 +35,5 @@
         <div class="retailer-grid-vertical-line"></div>
       </div>
     </div>
-    <!-- <div class="section-facilities__backdrop absolute inset-0 w-full h-full *:w-full *:h-full object-cover mix-blend-luminosity opacity-10">
-    </div>  -->
   </section>    
 </template>
