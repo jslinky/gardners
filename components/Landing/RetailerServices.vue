@@ -10,24 +10,24 @@
       <div class="retailer-grid mt-12 grow-1 basis-[600px]">
         <div class="retailer-item bg-white rounded shadow p-6">
           <div>
-            <h3 class="text-2xl font-semibold mb-2">Batch Chartered Supplier</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-2">Batch Chartered Supplier</h3>
+            <p class="text-gray-600 text-[clamp(var(--text-sm),2vi,var(--text-base))]">
               We integrate with Batch to streamline invoicing and payment processes for retailers.
             </p>
           </div>
         </div>
         <div class="retailer-item bg-white rounded shadow p-6">
           <div>
-            <h3 class="text-2xl font-semibold mb-2">Online Ordering Platform</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-2">Online Ordering Platform</h3>
+            <p class="text-gray-600 text-[clamp(var(--text-sm),2vi,var(--text-base))]">
               Order any of our titles through our intuitive online platform, available 24/7.
             </p>
           </div>
         </div>
         <div class="retailer-item bg-white rounded shadow p-6">
           <div>
-            <h3 class="text-2xl font-semibold mb-2">Consumer Direct Fulfillment</h3>          
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-2">Consumer Direct Fulfillment</h3>          
+            <p class="text-gray-600 text-[clamp(var(--text-sm),2vi,var(--text-base))]">
               We can dispatch products directly to your customers, saving you time and resources.
             </p>
           </div>

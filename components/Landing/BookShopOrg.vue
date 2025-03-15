@@ -23,13 +23,13 @@ import BookShopLogo from '../assets/img/bookshop-logo.svg';
       <div class="grid grid-cols-3 grid-rows-2 gap-8 *:self-center mt-12 full-bleed lg:w-full lg:mx-auto">
         <div class="bg-white rounded shadow p-6 col-start-1 col-end-1 row-start-1 row-end-1 text-right translate-x-1/4 flex flex-col items-end z-1">
           <h3 class="text-base lg:text-xl font-semibold mb-2">List with Nielsen</h3>
-          <p class="text-gray-700 max-w-60 text-sm lg:text-base">
+          <p class="text-gray-700 max-w-60 text-sm lg:text-base sr-only md:not-sr-only">
             Ensure your titles are listed with Nielsen Bookdata.
           </p>
         </div>
         <div class="bg-white rounded shadow p-6 col-start-1 col-end-1 row-start-2 row-end-2 text-right translate-x-1/4 flex flex-col items-end z-1">
           <h3 class="text-base lg:text-xl font-semibold mb-2">Customer Delivery</h3>
-          <p class="text-gray-700 max-w-60 text-sm lg:text-base">
+          <p class="text-gray-700 max-w-60 text-sm lg:text-base sr-only md:not-sr-only">
             Books reach Bookshop.org customers through our network.
           </p>
         </div>
@@ -38,13 +38,13 @@ import BookShopLogo from '../assets/img/bookshop-logo.svg';
         </div>
         <div class="bg-white rounded shadow p-6 col-start-3 col-end-3 row-start-1 row-end-1 -translate-x-1/4 ">
           <h3 class="text-base lg:text-xl font-semibold mb-2">Stock Availability</h3>
-          <p class="text-gray-700 max-w-60 text-sm lg:text-base">
+          <p class="text-gray-700 max-w-60 text-sm lg:text-base sr-only md:not-sr-only">
             Make stock available from a UK Publisher or Distributor.
           </p>
         </div>
         <div class="bg-white rounded shadow p-6 col-start-3 col-end-3 row-start-2 row-end-2 -translate-x-1/4">
           <h3 class="text-base lg:text-xl font-semibold mb-2">Gardners Orders</h3>
-          <p class="text-gray-700 max-w-60 text-sm lg:text-base">
+          <p class="text-gray-700 max-w-60 text-sm lg:text-base sr-only md:not-sr-only">
             We order your books for Bookshop.org customers.
           </p>
         </div>

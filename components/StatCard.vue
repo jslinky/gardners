@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
-type CssPropVal = Record<string, string | string[] | Record<string, string>>
+import type { ClassValue } from "clsx"
 
 type CssPropType = {
-    container?: CssPropVal;
-    headline?: CssPropVal;
-    headlineSpan?: CssPropVal;
-    title?: CssPropVal;
-    text?: CssPropVal
+    container?: ClassValue;
+    headline?: ClassValue;
+    headlineSpan?: ClassValue;
+    title?: ClassValue;
+    text?: ClassValue
 }
 
 type StatCardProps = {
@@ -18,32 +18,35 @@ type StatCardProps = {
     cssClasses?: CssPropType
 }
 
+
+const defaultStyles = {
+    'container': 'flex flex-col place-content-between bg-white rounded shadow p-6 text-[clamp(var(--text-4xl),7cqi,var(--text-6xl))]',
+    'headline': 'flex flex-col font-semibold mb-2 leading-[1]',
+    'headlineSpan': ['text-primary'],
+    'title': 'text-[0.375em] text-primary-dark',
+    'text': ['text-gray-600 text-[clamp(var(--text-xs),0.375em,var(--text-base))]']
+}
+
 const { 
     headline, 
     headlineEl = 'h3',
     title, 
     text, 
-    cssClasses = {
-        'container': 'flex flex-col place-content-between bg-white rounded shadow p-6',
-        'headline': 'flex flex-col text-4xl md:text-[clamp(var(--text-4xl),3cqi,var(--text-6xl))] font-semibold mb-2 leading-[1]',
-        'headlineSpan': ['text-primary'],
-        'title': 'text-[0.375em] text-primary-dark',
-        'text': ['text-gray-600']
-    }
+    cssClasses
 } = defineProps<StatCardProps>()
 
 </script>
 
 <template>
 
-<div :class="cssClasses?.container">
-    <slot name="headline" :styles="cssClasses">
-        <component :is="headlineEl" :class="cssClasses?.headline">
-            <span :class="cssClasses?.headlineSpan">{{ headline }}</span> <span :class="cssClasses?.title">{{ title }}</span>
+<div :class="cn(defaultStyles.container, cssClasses?.container)">
+    <slot name="headline" :styles="defaultStyles">
+        <component :is="headlineEl" :class="cn(defaultStyles.headline, cssClasses?.headline)">
+            <span :class="cn(defaultStyles.headlineSpan, cssClasses?.headlineSpan)">{{ headline }}</span> <span :class="cn(defaultStyles.title, cssClasses?.title)">{{ title }}</span>
         </component>
     </slot>
-    <slot name="text" :cssClasses="cssClasses">
-        <p :class="cssClasses?.text" v-html="text"></p>
+    <slot name="text" :cssClasses="defaultStyles.text">
+        <p :class="cn(defaultStyles.text, cssClasses?.text)" v-html="text"></p>
     </slot>
 </div>  
 

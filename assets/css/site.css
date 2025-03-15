@@ -222,7 +222,7 @@ nav {
 
   .section-eu-trading {
     details {
-        inline-size: 50ch;
+        inline-size: min(50ch, 100%);
       
         @media (prefers-reduced-motion: no-preference) {
           interpolate-size: allow-keywords;
@@ -242,12 +242,15 @@ nav {
 
         p {
             color: var(--color-gray-700);
-          }        
+        }        
     }    
 
     summary {
         &::marker {
             color: var(--color-primary);
+        }
+        + p {
+            margin-block-start: calc(var(--spacing) * 4);
         }
     }
 

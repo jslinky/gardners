@@ -26,8 +26,8 @@
         />
     </div>
     </div>    
-    <div class="section-eu-trading container-alt mx-auto px-4 mt-12">
-        <div class="flex flex-wrap flex-row gap-20">
+    <div class="section-eu-trading mx-auto lg:px-8 mt-12">
+        <div class="flex flex-wrap flex-row gap-6 lg:gap-20">
             <div class="grow-0">
                 <h2 class="text-2xl font-bold mb-4">EU Trading Information</h2>
                 <p class="text-gray-700 max-w-lg">
